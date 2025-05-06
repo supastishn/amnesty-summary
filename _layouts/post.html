@@ -16,14 +16,16 @@ layout: default
   </div>
 
   <nav class="post-navigation">
-    <div class="nav-links">
-      <a class="prev button {% unless page.previous.url %}disabled{% endunless %}" {% if page.previous.url %}href="{{ page.previous.url | relative_url }}"{% endif %}>
-        &laquo; Previous Post
-      </a>
-      <a href="{{ '/blog' | relative_url }}" class="button middle">All Posts</a>
-      <a class="next button {% unless page.next.url %}disabled{% endunless %}" {% if page.next.url %}href="{{ page.next.url | relative_url }}"{% endif %}>
-        Next Post &raquo;
-      </a>
+    <div class="nav-links" style="width: 100%">
+      <button class="prev {% unless page.previous.url %}disabled{% endunless %}">
+        <a class="button" {% if page.previous.url %}href="{{ page.previous.url | relative_url }}"{% endif %}>&laquo; Previous Post</a>
+      </button>
+      <button class="middle">
+        <a class="button" href="{{ '/blog' | relative_url }}">All Posts</a>
+      </button>
+      <button class="next {% unless page.next.url %}disabled{% endunless %}">
+        <a class="button" {% if page.next.url %}href="{{ page.next.url | relative_url }}"{% endif %}>Next Post &raquo;</a>
+      </button>
     </div>
   </nav>
 </article>
