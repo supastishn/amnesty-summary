@@ -16,15 +16,16 @@ layout: default
   </div>
 
   <nav class="post-navigation">
-    {% if page.previous.url %}
-      <a class="prev" href="{{ page.previous.url | relative_url }}">&laquo; {{ page.previous.title | truncatewords: 5 }}</a>
-    {% endif %}
-    {% if page.next.url %}
-      <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title | truncatewords: 5 }} &raquo;</a>
-    {% endif %}
+    <div class="nav-links">
+      {% if page.previous.url %}
+        <a class="prev button" href="{{ page.previous.url | relative_url }}">&laquo; Previous Post</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a class="next button" href="{{ page.next.url | relative_url }}">Next Post &raquo;</a>
+      {% endif %}
+    </div>
+    <div class="back-home">
+      <a href="{{ '/blog' | relative_url }}" class="button">View All Posts</a>
+    </div>
   </nav>
-  
-  <div class="all-posts">
-    <a href="{{ '/blog' | relative_url }}">View All Posts</a>
-  </div>
 </article>
