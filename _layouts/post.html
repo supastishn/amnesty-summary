@@ -20,12 +20,10 @@ layout: default
       <a class="prev button {% unless page.previous.url %}disabled{% endunless %}" {% if page.previous.url %}href="{{ page.previous.url | relative_url }}"{% endif %}>
         &laquo; Previous Post
       </a>
+      <a href="{{ '/blog' | relative_url }}" class="button middle">All Posts</a>
       <a class="next button {% unless page.next.url %}disabled{% endunless %}" {% if page.next.url %}href="{{ page.next.url | relative_url }}"{% endif %}>
         Next Post &raquo;
       </a>
-    </div>
-    <div class="back-home">
-      <a href="{{ '/blog' | relative_url }}" class="button">View All Posts</a>
     </div>
   </nav>
 </article>
