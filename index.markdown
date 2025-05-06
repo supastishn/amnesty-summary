@@ -1,6 +1,14 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: post
+title: Latest Post
+permalink: /
 ---
+
+{% assign first_post = site.posts.last %}
+<div class="home">
+  {% if site.posts.size > 0 %}
+    {{ first_post.content }}
+  {% else %}
+    <p>No posts yet. Check back soon!</p>
+  {% endif %}
+</div>
