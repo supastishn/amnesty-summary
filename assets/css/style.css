@@ -42,3 +42,36 @@
 .post-navigation .button:hover {
   background-color: #0056b3;
 }
+
+/* Accordion styles */
+.accordion-container {
+  width: 100%;
+}
+.accordion {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  text-align: left;
+  border: none;
+  background-color: #eee;
+  transition: background-color 0.3s;
+  position: relative;
+  font-size: 1em;
+}
+.accordion::after {
+  content: "▼";
+  font-size: 0.8em;
+  position: absolute;
+  right: 1em;
+}
+.accordion.active {
+  background-color: #ccc;
+}
+.accordion.active::after {
+  content: "▲";
+}
+.panel {
+  display: none;
+  overflow: hidden;
+  padding: 0 1em;
+}
