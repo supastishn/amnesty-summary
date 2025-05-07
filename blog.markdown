@@ -30,6 +30,10 @@ permalink: /blog/
       var icon = document.createElement("i");
       icon.className = "fas fa-chevron-down icon";
       acc[i].appendChild(icon);
+      
+      // Initialize panel as closed
+      var panel = acc[i].nextElementSibling;
+      panel.style.display = "none";
 
       acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
