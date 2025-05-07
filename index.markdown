@@ -5,7 +5,7 @@ permalink: /
 ---
 
 {% assign first_post = site.posts.last %}
-{% assign second_earliest_post = site.posts[1] %}
+{% assign second_earliest_post = site.posts[site.posts.size - 2] %}
 <div class="home">
   {% if site.posts.size > 0 %}
     {{ first_post.content }}
