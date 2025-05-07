@@ -4,8 +4,9 @@ title: Latest Post
 permalink: /
 ---
 
-{% assign first_post = site.posts.last %}
-{% assign second_earliest_post = site.posts[site.posts.size - 2] %}
+{% assign reversed_posts = site.posts | reverse %}
+{% assign first_post = reversed_posts[0] %}
+{% assign second_earliest_post = reversed_posts[1] %}
 <div class="home">
   {% if site.posts.size > 0 %}
     {{ first_post.content }}
@@ -13,9 +14,9 @@ permalink: /
     <p>No posts yet. Check back soon!</p>
   {% endif %}
 
-  {% if site.posts.size > 1 %}
-    <div style="margin-top: 2em; text-align: center;">{% comment %} Changed to second earliest post {% endcomment %}
-      <a href="{{ second_earliest_post.url | relative_url }}" class="button">Read the Second Earliest Post &raquo;</a>
+  {% if reversed_posts.size > 1 %}
+    <div style="margin-top: 2em; text-align: center;">
+      <a href="{{ second_earliest_post.url | relative_url }}" class="button">Read the Second Oldest Post &raquo;</a>
     </div>
   {% endif %}
 </div>
