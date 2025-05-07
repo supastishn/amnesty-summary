@@ -59,13 +59,20 @@
   font-size: 1em;
 }
 .accordion::after {
-  content: "▼";
+  content: "\f078"; /* fa-chevron-down */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-size: 0.8em;
   position: absolute;
   right: 1em;
+  transition: transform 0.3s ease;
 }
 .accordion.active {
   background-color: #ccc;
+}
+.accordion.active::after {
+  content: "\f077"; /* fa-chevron-up */
+  transform: rotate(180deg);
 }
 .accordion.active::after {
   content: "▲";
