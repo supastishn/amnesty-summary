@@ -2,7 +2,7 @@
 layout: post
 title:  "Getting Started with Jekyll"
 date:   2025-05-05 10:00:00 +0000
-categories: jekyll tutorial
+categories: jekyll
 ---
 
 In this introductory post, we'll walk through the basics of setting up a Jekyll site. Learn how to:

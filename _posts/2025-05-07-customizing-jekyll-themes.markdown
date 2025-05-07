@@ -2,7 +2,7 @@
 layout: post
 title:  "Customizing Jekyll Themes"
 date:   2025-05-07 14:30:00 +0000
-categories: jekyll design
+categories: jekyll
 ---
 
 Take your Jekyll site to the next level by learning how to:
