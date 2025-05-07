@@ -26,13 +26,21 @@ permalink: /blog/
   document.addEventListener("DOMContentLoaded", function() {
     var acc = document.getElementsByClassName("accordion");
     for (var i = 0; i < acc.length; i++) {
+      // Create and append icon element
+      var icon = document.createElement("i");
+      icon.className = "fas fa-chevron-down icon";
+      acc[i].appendChild(icon);
+
       acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
+        var icon = this.querySelector('.icon');
         if (panel.style.display === "block") {
           panel.style.display = "none";
+          icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
         } else {
           panel.style.display = "block";
+          icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
         }
       });
     }
