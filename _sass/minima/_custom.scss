@@ -29,15 +29,16 @@
     width: 100%;
     padding: 0.8em 1.5em;
     text-align: center;
-    background-color: #007bff;
-    color: white;
+    background-color: transparent;
+    color: #333;
     text-decoration: none;
+    border: 1px solid #ddd;
     border-radius: 4px;
     transition: all 0.3s;
     cursor: pointer;
     
     &:hover {
-      background-color: #0056b3;
+      background-color: #f8f9fa;
     }
   }
 }
