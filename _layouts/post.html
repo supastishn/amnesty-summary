@@ -8,11 +8,10 @@ layout: default
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
       {% if page.author %} • <span>{{ page.author | escape }}</span>{% endif %}
-      {% if page.categories.size > 0 %}
-        • Categories:
-        {% for category in page.categories %}
-          <a href="{{ site.baseurl | append: '/categories/' | append: category | slugify | relative_url }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-        {% endfor %}
+      {% assign category = page.categories[0] %}
+      {% if category %}
+        • Category:
+        <a href="{{ site.baseurl | append: '/categories/' | append: category | slugify | relative_url }}">{{ category }}</a>
       {% endif %}
 
     </p>
