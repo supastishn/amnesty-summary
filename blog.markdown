@@ -35,12 +35,12 @@ permalink: /blog/
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         var icon = this.querySelector('.icon');
+        icon.style.transform = this.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        
         if (panel.style.display === "block") {
           panel.style.display = "none";
-          icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
         } else {
           panel.style.display = "block";
-          icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
         }
       });
     }

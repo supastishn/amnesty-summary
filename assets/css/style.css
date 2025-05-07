@@ -68,20 +68,6 @@
   transition: transform 0.3s ease;
 }
 
-.icon {
-  position: absolute;
-  right: 1em;
-  font-size: 0.8em;
-  transition: transform 0.3s ease;
-}
-
-.icon {
-  position: absolute;
-  right: 1em;
-  font-size: 0.8em;
-  transition: transform 0.3s ease;
-}
-
 .panel {
   display: none;
   overflow: hidden;
