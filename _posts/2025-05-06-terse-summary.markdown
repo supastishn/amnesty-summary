@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Terse Summary of Amnesty International's Document."
+title:  "A Terse Summary of Amnesty International's Document"
 date:   2025-05-06 16:48:34 +0000
 categories: summary
 ---
