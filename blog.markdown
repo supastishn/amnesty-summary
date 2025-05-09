@@ -11,7 +11,7 @@ permalink: /blog/
     {% assign cat_name = category[0] %}
     <button class="accordion">{{ cat_name }}</button>
     <div class="panel">
-      <div class="panel-content"> {# Added wrapper for padding and smooth animation #}
+      <div class="panel-content"> 
         <ul class="post-list">
           {% for post in category[1] %}
           <li>
@@ -20,7 +20,7 @@ permalink: /blog/
           </li>
         {% endfor %}
       </ul>
-      </div> {# Closing panel-content #}
+      </div> 
     </div>
   {% endfor %}
 </div>
