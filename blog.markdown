@@ -11,14 +11,16 @@ permalink: /blog/
     {% assign cat_name = category[0] %}
     <button class="accordion">{{ cat_name }}</button>
     <div class="panel">
-      <ul class="post-list">
-        {% for post in category[1] %}
+      <div class="panel-content"> {# Added wrapper for padding and smooth animation #}
+        <ul class="post-list">
+          {% for post in category[1] %}
           <li>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
             <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
           </li>
         {% endfor %}
       </ul>
+      </div> {# Closing panel-content #}
     </div>
   {% endfor %}
 </div>
@@ -33,18 +35,28 @@ permalink: /blog/
       
       // Initialize panel as closed
       var panel = acc[i].nextElementSibling;
-      panel.style.display = "none";
+      // panel.style.display = "none"; // Old: using display property
+      panel.style.maxHeight = null; // New: use max-height for animation, CSS handles initial closed state (max-height: 0)
 
       acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         var icon = this.querySelector('.icon');
-        icon.style.transform = this.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
         
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
+        // Toggle icon rotation using CSS class
+        if (this.classList.contains('active')) {
+          icon.classList.add('rotated');
         } else {
-          panel.style.display = "block";
+          icon.classList.remove('rotated');
+        }
+        
+        // Toggle panel visibility with max-height animation
+        if (panel.style.maxHeight && panel.style.maxHeight !== "0px") { // If maxHeight is set (i.e., panel is open)
+          panel.style.maxHeight = null; // Close it by resetting to CSS default (max-height: 0)
+        } else {
+          // panel.scrollHeight includes padding and border of the content, if box-sizing is content-box.
+          // For .panel-content, scrollHeight will be its content's actual height.
+          panel.style.maxHeight = panel.scrollHeight + "px"; // Open it by setting max-height to its content height
         }
       });
     }

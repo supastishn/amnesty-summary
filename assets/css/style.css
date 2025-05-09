@@ -51,26 +51,45 @@
 .accordion {
   width: 100%;
   cursor: pointer;
-  padding: 0.5em 1em;
+  padding: 1em 1.5em; /* Updated padding for a more spacious feel */
   text-align: left;
-  border: none;
-  background-color: #eee;
-  transition: background-color 0.3s;
+  border: none; 
+  border-bottom: 1px solid #e0e0e0; /* Subtle bottom border for separation */
+  background-color: transparent; /* Cleaner, modern look */
+  transition: background-color 0.2s ease-out;
   position: relative;
   font-size: 1em;
+  outline: none; /* Optional: remove default browser focus outline */
+}
+.accordion:hover {
+  background-color: #f5f5f5; /* Subtle hover effect */
 }
 .accordion.active {
-  background-color: #ccc;
+  background-color: #efefef; /* Lighter background for active state */
+  /* border-bottom-color: #d0d0d0; */ /* Optional: slightly darker border when active */
 }
 .icon {
   position: absolute;
-  right: 1em;
+  right: 1.5em; /* Aligned with new padding */
+  top: 50%; /* Vertically center */
+  transform: translateY(-50%) rotate(0deg); /* Initial state, centered and not rotated */
   font-size: 0.8em;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-out; /* Smoother animation */
+}
+.icon.rotated {
+  transform: translateY(-50%) rotate(180deg); /* Rotated state */
 }
 
 .panel {
-  display: none;
+  /* display: none; */ /* Replaced by max-height for animation */
   overflow: hidden;
-  padding: 0 1em;
+  /* padding: 0 1em; */ /* Padding moved to .panel-content */
+  background-color: #fff; /* Optional: ensures panel content area has a background */
+  max-height: 0; /* Initially closed */
+  transition: max-height 0.35s ease-out; /* Animation for opening/closing */
+}
+
+/* New style for panel content to handle padding correctly with max-height animation */
+.panel-content {
+  padding: 1em 1.5em; /* Padding for the content inside the panel */
 }
