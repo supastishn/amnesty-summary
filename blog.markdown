@@ -9,7 +9,13 @@ permalink: /blog/
 <div class="accordion-container">
   {% for category in site.categories %}
     {% assign cat_name = category[0] %}
-    <button class="accordion">{{ cat_name }}</button>
+    {%- capture display_cat_name -%}
+      {%- assign name_parts = cat_name | replace: "-", " " | split: " " -%}
+      {%- for part in name_parts -%}
+        {{ part | capitalize }}{%- unless forloop.last -%} {{ " " }}{%- endunless -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    <button class="accordion">{{ display_cat_name | strip }}</button>
     <div class="panel">
       <div class="panel-content"> 
         <ul class="post-list">
