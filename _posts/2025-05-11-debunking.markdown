@@ -14,7 +14,7 @@ Here, I shall debunk the most common pro-Israeli arguments.
 I'm not the one making the points. I'm merely summarizing Amnesty International's document, whose methodology can be found on this website
 
 3. You're antisemetic!
-First of all, I do not hate the Jews. Second of all, even if this *was* true, this point is ad homineJews. Second of all, even if this *was* true, this point is ad hominem.
+First of all, I do not hate the Jews. Second of all, even if this *was* true, this point is ad hominem.
 
 4. How do we know Amnesty International is true?
 See the methodology of the report on my website.
