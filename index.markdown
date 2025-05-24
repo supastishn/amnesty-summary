@@ -16,7 +16,7 @@ permalink: /
 
   {% if reversed_posts.size > 1 %}
     <div style="margin-top: 2em; text-align: center;">
-      <a href="/palestinian-genocide/terse-summary" class="button">Read the Summary &raquo;</a>
+      <a href="/amnesty-summary/terse-summary" class="button">Read the Summary &raquo;</a>
     </div>
   {% endif %}
 </div>

@@ -23,7 +23,7 @@ email: omareeto2012@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This site provides summaries and analyses of Amnesty International's report alleging genocide by Israel in Gaza.
   Explore the findings, methodology, and legal arguments presented in the report to understand the complexities of the situation.
-baseurl: "/palestinian-genocide" # the subpath of your site, e.g. /blog
+baseurl: "/amnesty-summary" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  supastishn
